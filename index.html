@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="ja"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#16090e">
+<meta name="description" content="相模原のCLUB N。笑顔が集まる、特別な夜を。広々とした店内で楽しいひとときをお過ごしください。">
+<title>CLUB N | 相模原</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Noto+Sans+JP:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--g:#d9b66d;--g2:#f3dda7;--cream:#fff6ed;--muted:#d5c3bb;--line:#d9b66d55}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#12090d;color:var(--cream);font-family:"Noto Sans JP",sans-serif;font-weight:300;line-height:1.85}a{color:inherit;text-decoration:none}
+.topline{height:4px;background:linear-gradient(90deg,#5d1024,var(--g2),#8c2940,var(--g))}
+header{position:absolute;z-index:5;top:4px;width:100%;border-bottom:1px solid #ffffff20;background:#12090d55}
+.nav{max-width:1180px;margin:auto;padding:15px 26px;display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:11px}.brand img{width:48px;height:48px;object-fit:cover;border-radius:50%;border:1px solid var(--g)}
+.brand-name{font:24px "Cormorant Garamond",serif;letter-spacing:.22em;color:var(--g2)}.brand-name small{display:block;font:9px "Noto Sans JP";letter-spacing:.38em;text-align:center}
+.navlinks{display:flex;gap:25px;align-items:center;font-size:11px;letter-spacing:.13em}.navlinks a:hover{color:var(--g2)}.nav-cta{padding:8px 16px;border:1px solid var(--g);color:var(--g2)}.menu-btn{display:none;background:none;border:1px solid var(--line);color:var(--g2);padding:7px 12px;font-size:20px}
+.hero{min-height:700px;height:100svh;max-height:920px;position:relative;display:grid;place-items:center;overflow:hidden;background:linear-gradient(90deg,#10070bd9,#16090db8 48%,#10070bd9),url("assets/club-interior-4.jpg") center 52%/cover no-repeat}
+.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,#10070b55,transparent 35%,#10070b88)}
+.hero:after{content:"";position:absolute;width:min(76vw,700px);height:min(76vw,700px);border:1px solid #e0bd7330;border-radius:50%;box-shadow:0 0 0 18px #e0bd7308,0 0 0 52px #e0bd7306}
+.hero-inner{position:relative;z-index:2;text-align:center;padding:120px 22px 65px}.hero-logo{width:clamp(135px,19vw,205px);height:clamp(135px,19vw,205px);object-fit:cover;border-radius:50%;border:2px solid #e2c47c;box-shadow:0 12px 50px #0008;margin-bottom:20px}
+.eyebrow{font-size:11px;letter-spacing:.32em;color:var(--g2)}h1{font:500 clamp(54px,9vw,92px)/1.1 "Cormorant Garamond",serif;letter-spacing:.22em;color:var(--g2);margin:4px 0 0;padding-left:.22em}.subbrand{font-size:11px;letter-spacing:.28em;color:#f5dfb8}
+.hero-copy{font-size:clamp(15px,2vw,19px);letter-spacing:.1em;margin:20px 0 28px}.hero-actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+.btn{min-width:175px;padding:12px 22px;font-size:11px;letter-spacing:.16em;border:1px solid var(--g);transition:.2s}.btn-primary{background:linear-gradient(120deg,#c39a4e,#f1d99d);color:#241017}.btn-outline{color:var(--g2);background:#0002}.btn:hover{transform:translateY(-3px)}
+.scroll{position:absolute;bottom:20px;left:50%;transform:translateX(-50%);font-size:9px;letter-spacing:.35em;color:#d8c08e}
+section{padding:88px 24px}.wrap{max-width:1080px;margin:auto}.section-label{text-align:center;font:14px "Cormorant Garamond";color:var(--g);letter-spacing:.34em}h2{text-align:center;font:500 clamp(34px,5vw,48px) "Cormorant Garamond";letter-spacing:.15em;color:var(--g2);margin:4px 0 28px}
+.intro{background:linear-gradient(180deg,#1a0b11,#26101a)}.intro-text{max-width:760px;margin:auto;text-align:center;color:#e3d4cc;font-size:14px;line-height:2.35}.intro-text strong{color:#ffe5b0;font-weight:500}
+.pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:40px}.pillar{padding:25px 18px;text-align:center;border:1px solid var(--line);background:#8c28401f}.pillar b{display:block;font:25px "Cormorant Garamond";color:var(--g2)}.pillar span{font-size:12px;color:var(--muted)}
+.space{background:#12090d}.space-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:30px;align-items:center}.space-art{min-height:390px;border:1px solid var(--line);background:url("assets/club-interior-1.jpg") center/cover no-repeat;position:relative;overflow:hidden;box-shadow:0 18px 45px #0008}.space-art:after{content:"";position:absolute;inset:0;border:1px solid #e6c47b55;background:linear-gradient(0deg,#12090d55,transparent 45%)}
+.photo-gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:26px}.photo-gallery img{width:100%;height:210px;object-fit:cover;border:1px solid var(--line);box-shadow:0 10px 28px #0006}.space-copy h3{font-size:22px;font-weight:400;color:var(--g2);line-height:1.7;margin:0 0 12px}.space-copy p{font-size:13px;color:var(--muted);line-height:2.2}
+.cast{background:linear-gradient(180deg,#210d17,#32111e)}.cast-box{max-width:760px;margin:auto;text-align:center;padding:30px 24px;border:1px solid var(--line);background:#0002}.cast-box strong{display:block;font-size:19px;font-weight:400;color:#ffe2a7;margin-bottom:8px}.cast-box p{margin:0;color:#dfcec5;font-size:13px}
+.system{background:#12090d}.notice{max-width:720px;margin:auto;text-align:center;border:1px solid var(--line);padding:32px 24px;color:var(--muted);font-size:13px;background:#70203926}.notice strong{display:block;color:var(--g2);font-size:17px;font-weight:400;margin-bottom:8px}
+.access{background:#1d0b12}.access-grid{display:grid;grid-template-columns:1fr 1fr;gap:25px}.access-card{border:1px solid var(--line);padding:28px}.access-card h3{font:25px "Cormorant Garamond";color:var(--g2);margin:0 0 12px}.access-card p{font-size:13px;color:#dfcec5}
+.map-placeholder{min-height:220px;display:grid;place-items:center;text-align:center;background:linear-gradient(135deg,#542034,#1a0b12);border:1px solid var(--line);color:#e3c88f;font-size:13px;padding:20px}
+.contact{text-align:center;background:linear-gradient(180deg,#16090e,#2b0d19);padding-bottom:100px}.contact p{color:var(--muted);font-size:13px;margin-bottom:25px}.social{display:inline-block;margin-top:15px;color:var(--g2);font-size:12px;border-bottom:1px solid var(--g);padding-bottom:4px}
+/* TikTok: black base with neon accents */
+.tiktok-panel{display:block;width:min(100%,390px);margin:28px auto 0;padding:25px 22px 22px;background:#050508;border:1px solid #292936;border-radius:16px;box-shadow:0 0 18px #00f2ea22,0 0 28px #ff005522;text-align:center}
+.tiktok-kicker{font-size:10px;letter-spacing:.28em;color:#a7a7b5}
+.tiktok-title{display:block;margin:5px 0 16px;font:600 28px "Cormorant Garamond",serif;letter-spacing:.16em;color:#fff;text-shadow:2px 0 #ff0050,-2px 0 #00f2ea}
+.tiktok-button{display:inline-block;padding:11px 26px;background:#08080d;border:1px solid #00f2ea;border-radius:4px;color:#fff;font-size:12px;letter-spacing:.15em;box-shadow:3px 3px 0 #ff0050,0 0 14px #00f2ea55;transition:.2s}
+.tiktok-button:hover{transform:translateY(-2px);box-shadow:3px 3px 0 #ff0050,0 0 22px #00f2ea99}
+.tiktok-handle{display:block;margin-top:14px;color:#00f2ea;font-size:12px;letter-spacing:.08em;text-shadow:0 0 8px #00f2ea88}
+
+footer{border-top:1px solid var(--line);padding:23px;text-align:center;color:#a18d83;font-size:10px;letter-spacing:.13em}
+@media(max-width:760px){.nav{padding:12px 17px}.navlinks{display:none;position:absolute;top:72px;left:0;width:100%;padding:22px;background:#180a10;flex-direction:column;gap:18px;border-bottom:1px solid var(--line)}.navlinks.open{display:flex}.menu-btn{display:block}.hero{min-height:670px}.pillars{grid-template-columns:1fr}.space-grid,.access-grid{grid-template-columns:1fr}.space-art{min-height:210px}.photo-gallery{grid-template-columns:1fr 1fr}.photo-gallery img{height:150px}.photo-gallery img:last-child{display:none}section{padding:70px 19px}.hero-copy{line-height:2}}
+
+.price-card{max-width:720px;margin:30px auto 0;padding:30px 34px;border:1px solid var(--line);background:linear-gradient(145deg,#211018,#100a0e);box-shadow:0 18px 45px #0007}
+.price-hours{text-align:center;color:var(--gold);font-size:24px;font-weight:700;letter-spacing:.12em;padding-bottom:20px;border-bottom:1px solid var(--line);margin-bottom:12px}
+.price-row{display:flex;justify-content:space-between;gap:18px;padding:13px 2px;border-bottom:1px solid #ffffff18;font-size:17px}
+.price-row.set-price-row{border-bottom:0;padding-bottom:7px}
+.price-row strong{color:var(--gold);white-space:nowrap;font-size:19px}
+.price-note{font-size:13px;color:#d7c7c0;margin:0;padding:0 2px 13px;border-bottom:1px solid #ffffff18}
+.price-foot{font-size:13px;line-height:1.9;color:#d7c7c0;margin-top:22px}
+.phone-link{display:inline-block;color:var(--gold);font-size:clamp(25px,4vw,34px);font-weight:700;letter-spacing:.06em;margin:5px 0 24px;text-decoration:none}
+@media(max-width:600px){.price-card{padding:23px 18px}.price-row{font-size:15px}.price-row strong{font-size:17px}.price-hours{font-size:21px}}
+
+.cast-intro,.events-lead{max-width:760px;margin:0 auto 25px;text-align:center;color:#dfcec5;font-size:13px}
+.cast-intro strong{display:block;color:#ffe2a7;font-size:19px;font-weight:400;margin-bottom:8px}
+.video-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;max-width:900px;margin:0 auto}
+.video-placeholder{min-height:220px;border:1px solid var(--line);background:linear-gradient(135deg,#351522,#160a10);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:22px;box-shadow:0 12px 32px #0005}
+.play-mark{width:48px;height:48px;border:1px solid var(--g);border-radius:50%;display:grid;place-items:center;color:var(--g2);padding-left:3px;margin-bottom:13px}
+.video-placeholder b{font:20px "Cormorant Garamond";letter-spacing:.15em;color:var(--g2)}
+.video-placeholder span{font-size:12px;color:var(--muted);margin-top:7px}
+.events{background:#12090d}
+.event-placeholder{background:linear-gradient(135deg,#2d1420,#160a10)}
+.event-video{display:block;width:100%;max-width:850px;margin:0 auto;border:1px solid var(--line);box-shadow:0 12px 32px #0005;background:#000;border-radius:4px}
+.event-video video{display:block;width:100%;height:auto;max-height:75vh}
+.map-frame{min-height:300px;border:1px solid var(--line);overflow:hidden}
+.map-frame iframe{width:100%;height:100%;min-height:300px;border:0;filter:grayscale(.25) contrast(.95)}
+.map-link{display:inline-block;margin-top:8px;color:var(--g2);font-size:13px;border-bottom:1px solid var(--g);padding-bottom:4px}
+@media(max-width:760px){.video-grid{grid-template-columns:1fr}.video-placeholder{min-height:190px}.map-frame,.map-frame iframe{min-height:260px}}
+</style></head><body>
+<div class="topline"></div><header><nav class="nav">
+<a class="brand" href="#top"><img src="assets/club-n-logo.jpg" alt="CLUB N ロゴ"><span class="brand-name">CLUB N<small>SAGAMIHARA</small></span></a>
+<button class="menu-btn" aria-label="メニューを開く" aria-expanded="false">☰</button>
+<div class="navlinks"><a href="#about">ABOUT</a><a href="#space">SPACE</a><a href="#events">EVENT</a><a href="#system">SYSTEM</a><a href="#access">ACCESS</a><a class="nav-cta" href="#contact">CONTACT</a></div>
+</nav></header><main id="top">
+<section class="hero"><div class="hero-inner"><img class="hero-logo" src="assets/club-n-logo.jpg" alt="CLUB N エンブレム"><div class="eyebrow">PHILIPPINE PUB &amp; LOUNGE</div><h1>CLUB N</h1><div class="subbrand">SAGAMIHARA</div><p class="hero-copy">笑顔が集まる、特別な夜を。</p><div class="hero-actions"><a class="btn btn-primary" href="#about">DISCOVER CLUB N</a><a class="btn btn-outline" href="#access">ACCESS</a></div></div><div class="scroll">SCROLL</div></section>
+<section class="intro" id="about"><div class="wrap"><div class="section-label">WELCOME</div><h2>ABOUT CLUB N</h2><div class="intro-text"><strong>いつもの夜に、ちょっと特別な楽しさを。</strong><br>CLUB Nは、明るく親しみやすい雰囲気の中で、楽しい時間を過ごせるアットホームなお店です。<br>お一人でも、仲間と一緒でも。気取らずゆったりと、会話の弾む楽しい時間をお過ごしください。</div><div class="pillars"><div class="pillar"><b>SMILE</b><span>笑顔でお迎えする、あたたかな時間</span></div><div class="pillar"><b>RELAX</b><span>広々とした開放的な店内で、ゆったり</span></div><div class="pillar"><b>ENJOY</b><span>会話と音楽で楽しむ、心弾むひととき</span></div></div></div></section>
+<section class="space" id="space"><div class="wrap"><div class="section-label">OUR SPACE</div><h2>RELAX &amp; ENJOY</h2><div class="space-grid"><div class="space-art" aria-label="店内イメージ"></div><div class="space-copy"><h3>広々とした開放的な空間で、<br>心ゆくまで楽しい時間を。</h3><p>ゆったりと過ごせる店内で、日常を少し離れた特別なひとときを。お友達同士でも、お一人でも、気軽にお立ち寄りください。</p></div></div>
+<div class="photo-gallery">
+  <img src="assets/club-interior-2.jpg" alt="ゆったりとしたソファー席">
+  <img src="assets/club-interior-3.jpg" alt="店内のテーブル席">
+  <img src="assets/club-interior-5.jpg" alt="店内全体の様子">
+</div>
+</div></section>
+<section class="events" id="events"><div class="wrap"><div class="section-label">NEWS &amp; EVENTS</div><h2>EVENT INFORMATION</h2>
+<p class="events-lead">CLUB Nのイベントやお知らせを動画・写真でご紹介します。</p>
+<div class="video-grid">
+  <div class="event-video"><video controls playsinline preload="metadata"><source src="assets/club-n-event-video.mp4" type="video/mp4">お使いのブラウザでは動画を再生できません。</video></div>
+</div></div></section>
+<section class="system" id="system"><div class="wrap"><div class="section-label">PRICE &amp; INFORMATION</div><h2>SYSTEM</h2>
+<div class="price-card">
+  <div class="price-hours">20:00 ～ LAST</div>
+  <div class="price-row set-price-row"><span>セット料金（60分）</span><strong>4,000円</strong></div>
+  <p class="price-note">焼酎・ウイスキー飲み放題</p>
+  <div class="price-row"><span>延長料金（60分）</span><strong>3,000円</strong></div>
+  <div class="price-row"><span>延長料金（30分）</span><strong>2,000円</strong></div>
+  <div class="price-row"><span>本指名料金</span><strong>2,000円</strong></div>
+  <div class="price-row"><span>場内指名料金</span><strong>1,000円</strong></div>
+  <div class="price-foot">本指名・場内指名料金はセット1回のみ。延長時、指名料金は頂きません。<br>お会計の際にサービス料10％を頂きます。</div>
+</div></div></section>
+<section class="access" id="access"><div class="wrap"><div class="section-label">LOCATION</div><h2>ACCESS</h2><div class="access-grid"><div class="access-card"><h3>CLUB N</h3><p>〒252-0231 神奈川県相模原市中央区相模原２丁目４−１ １F</p><p>相模原駅南口から徒歩3分</p><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=〒252-0231%20神奈川県相模原市中央区相模原２丁目４−１%201F" target="_blank" rel="noopener">Googleマップで道順を確認する ↗</a></div><div class="map-frame"><iframe title="CLUB N Googleマップ" src="https://www.google.com/maps?q=〒252-0231%20神奈川県相模原市中央区相模原２丁目４−１%201F&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></div></div></div></section>
+<section class="contact" id="contact"><div class="wrap"><div class="section-label">FOLLOW &amp; CONTACT</div><h2>CONTACT</h2><p>ご予約・お問い合わせはこちら</p><a class="phone-link" href="tel:0427687226">042-768-7226</a><br><div class="tiktok-panel"><span class="tiktok-kicker">FOLLOW US</span><span class="tiktok-title">TIKTOK</span><a class="tiktok-button" href="https://www.tiktok.com/@nclub_sagamihara?_r=1&amp;_t=ZS-9BUbOl42em5" target="_blank" rel="noopener">OFFICIAL ACCOUNT ↗</a><a class="tiktok-handle" href="https://www.tiktok.com/@nclub_sagamihara?_r=1&amp;_t=ZS-9BUbOl42em5" target="_blank" rel="noopener">@nclub_sagamihara</a></div></div></section>
+</main><footer>© <span id="year"></span> CLUB N SAGAMIHARA. ALL RIGHTS RESERVED.</footer>
+<script>document.getElementById("year").textContent=new Date().getFullYear();const b=document.querySelector(".menu-btn"),n=document.querySelector(".navlinks");b.addEventListener("click",()=>{const o=n.classList.toggle("open");b.setAttribute("aria-expanded",String(o));b.textContent=o?"×":"☰"});n.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>{n.classList.remove("open");b.setAttribute("aria-expanded","false");b.textContent="☰"}));</script>
+</body></html>
